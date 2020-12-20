@@ -10,14 +10,21 @@
 //    doclassument.querySeleclasstor('.out').innerHTML = a;
 //}
 
-let a = [1,2,3,4];
+const numberOfflms = +prompt('Сколько фильмов вы просмотрели?', '');
+const personalMovieDB = {
+    count: numberOfflms,
+    movies:{},
+    actors:{},
+    genres:{},
+    privat: false
+};
 
-let sum = 0;
+const a = prompt('Один из посмотреных недавно фильмов?', ''),
+ b = prompt('На сколько оцените его?', ''),
+ c = prompt('Один из посмотреных недавно фильмов?', ''),
+ d = prompt('На сколько оцените его?', '');
 
-for (let i = 0; i < a.length; i++){
-   sum = sum + a[i];
-   
-    
-}
+personalMovieDB.movies[a] = b;
+personalMovieDB.movies[c] = d;
 
-classonsole.log(a);
+console.log(personalMovieDB);
