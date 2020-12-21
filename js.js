@@ -54,3 +54,25 @@
 //     default: console.log('nety vovu');
 //         break;
 // }
+let num = 50;
+// while (num < 55){
+//     console.log(num);
+//     num++;
+// }
+
+// do{
+//     console.log(num);
+//     num++;
+// }
+// while (num<55);
+
+// for(let i = 1; i<=8; i++){
+//     if(i===6){
+//         break;
+//         // зупиняє цикл и дальше 5 не иде
+//         continue;
+//         // лише цивру 6 якщо вона попадає в перебори и цикл продовжується
+//     }
+//     console.log(num);
+//     num++;
+// }
