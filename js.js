@@ -10,14 +10,14 @@
 //    doclassument.querySeleclasstor('.out').innerHTML = a;
 //}
 
-// const numberOfflms = +prompt('Сколько фильмов вы просмотрели?', '');
-// const personalMovieDB = {
-//     count: numberOfflms,
-//     movies:{},
-//     actors:{},
-//     genres:{},
-//     privat: {}
-// };
+const numberOfflms = +prompt('Сколько фильмов вы просмотрели?', '');
+const personalMovieDB = {
+    count: numberOfflms,
+    movies:{},
+    actors:{},
+    genres:{},
+    privat: {}
+};
 //
 // const a = prompt('Один из посмотреных недавно фильмов?', ''),
 //     f = prompt('актер'),
@@ -54,7 +54,7 @@
 //     default: console.log('nety vovu');
 //         break;
 // }
-let num = 50;
+// let num = 50;
 // while (num < 55){
 //     console.log(num);
 //     num++;
@@ -76,3 +76,29 @@ let num = 50;
 //     console.log(num);
 //     num++;
 // }
+
+for( let i = 1; i<2; i++){
+
+
+        a = prompt('Один из посмотреных недавно фильмов?', ''),
+        b = prompt('На сколько оцените его?', '');
+
+
+    if(a != null && b != null && a != ' ' && b != ' ' && a.length < 50){
+
+        personalMovieDB.movies[a] = b;
+        console.log(personalMovieDB);
+
+    }
+
+    else{
+        console.log('error');
+        a = prompt('Один из посмотреных недавно фильмов?', ''),
+            b = prompt('На сколько оцените его?', '');
+        i--;
+    }
+
+
+
+
+}
