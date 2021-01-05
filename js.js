@@ -170,8 +170,8 @@
 //
 // console.log(name('vova','kat'));
 
-let str = 'voKKKal kakax';
-let arr = [1,2,3];
+// let str = 'voKKKal kakax';
+// let arr = [1,2,3];
 
 // console.log(arr.length);
 
@@ -190,8 +190,73 @@ let arr = [1,2,3];
 //
 // console.log(Math.round(num));
 
-const pixl = '13.6px';
+// const pixl = '13.6px';
 
 // console.log(parseInt(pixl));
 
-console.log(parseFloat(pixl));
+// console.log(parseFloat(pixl));
+
+let namberOffikms;
+
+
+
+function start() {
+     namberOffikms = +prompt('Сколько фильмов вы посмотрели?', ' ');
+
+     while(namberOffikms == '' || namberOffikms == null || isNaN(namberOffikms)){
+         namberOffikms = +prompt('Сколько фильмов вы посмотрели?', ' ');
+     }
+}
+
+start();
+
+const personalMovieDB = {
+    count: namberOffikms,
+    muvios: {},
+    actors:{},
+    genres:{},
+    privat: false
+};
+
+function rememberfilms() {
+    for( let i = 0; i<2 ; i++){
+
+        let a = prompt('Какоф фильм вы смотрели?', ''),
+            b = +prompt('Оцените фильм оценкой', '');
+        if(a != null && b != null && a != '' && b != '' && a.length < 10){
+            personalMovieDB.muvios[a] = b;
+            console.log('done');
+        }else{
+            console.log('errors');
+            i--;
+        }
+
+    }
+}
+
+//rememberfilms();
+
+function yourLikeGenres() {
+    for(let i=0; i<3; i++){
+        let genres = prompt(`Ваш любимый жанр фильмов ${i}`);
+        personalMovieDB.genres[i]=genres;
+        console.log(genres);
+    }
+}
+
+yourLikeGenres();
+
+
+function showMyDB(hidden){
+
+    if(!hidden){
+        console.log(personalMovieDB);
+    }else{
+        console.log( );
+    }
+}
+
+
+showMyDB(personalMovieDB.privat);
+
+
