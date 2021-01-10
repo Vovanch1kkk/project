@@ -15,7 +15,7 @@ P.S. Функции вызывать не обязательно*/
 
 // Код возьмите из предыдущего домашнего задания
 
-let namberfikms;
+// let namberfikms;
 
 
 
@@ -26,67 +26,193 @@ let namberfikms;
 //
 // console.log(personalMovieDB);
 
-function namberOffikms() {
-    namberfikms = +prompt('Сколько фильмов вы посмотрели?');
-    while(namberfikms == '' || namberfikms == null || isNaN(namberfikms)){
-        namberfikms = +prompt('Сколько фильмов вы посмотрели?');
+// function namberOffikms() {
+//     namberfikms = +prompt('Сколько фильмов вы посмотрели?');
+//     while(namberfikms == '' || namberfikms == null || isNaN(namberfikms)){
+//         namberfikms = +prompt('Сколько фильмов вы посмотрели?');
+//     }
+// }
+// namberOffikms();
+// const personalMovieDB = {
+//     count: namberfikms,
+//     muvios: {},
+//     actors:{},
+//     genres:{},
+//     privat: false
+// }
+//
+// function muvis(){
+//     for( let i = 0; i <1; i++) {
+//         let a = prompt('Какой фильм вы смотрели недавно?'),
+//             b = +prompt('Какую оценку вы поставите фильму');
+//         if (a != null && b != null && a != '' && b != '' && a.length < 10) {
+//             personalMovieDB.muvios[a] = b;
+//             console.log('done');
+//         } else {
+//             console.log('errors');
+//             i--;
+//         }
+//     }
+// }
+// // muvis();
+//
+//
+// function countFilms(){
+//     let counF = personalMovieDB.count;
+//     if(counF < 10){
+//         alert('Просмотрено довольно мало фильмов');
+//     }else if(counF == 10 || counF <=30){
+//         alert('Вы классический зритель');
+//     }else if (counF >=30){
+//         alert('Вы киноман');
+//     }else{
+//         alert('Произошла ошибка');
+//     }
+// }
+// // countFilms();
+//
+// function writeYourGenres(){
+//
+//     for(let i = 0; i<3; i++){
+//         let ganrs = prompt(`Ваш лббимый жанр ${i}`);
+//         personalMovieDB.genres[i] = ganrs;
+//
+//     }
+// }
+// writeYourGenres();
+//
+// function showMyDB(hiden){
+//     if(!hiden){
+//         console.log(personalMovieDB);
+//     }else{
+//         console.log('hidenDB');
+//     }
+// }
+// console.log(personalMovieDB.genres);
+// showMyDB(personalMovieDB.privat);
+
+
+
+// function test(value, funct) {
+// //     console.log(value);
+// //     funct();
+// // }
+// //
+// // function name(){
+// //     console.log('Vova');
+// // }
+// //
+// // test('privet',name);
+
+// const option = {
+//     name:'vova',
+//     height: 165,
+//     wdth:45,
+//     colors:{
+//         broder: 'whit',
+//         bd: 'dark'
+//     },
+//
+//     name: function () {
+//         console.log('Vova');
+// }
+//
+// }
+
+
+
+
+
+// let count = 0;
+//
+// for(let key in option){
+//
+//     if(typeof(option[key]) === 'object'){
+//         for(let i in option[key]){
+//             console.log(`Ключ ${i} со значение ${option[key][i]}`);
+//             count ++;
+//         }
+//     }else{
+//         console.log(`Ключ ${key} со значение ${option[key]}`);
+//         count++;
+//     }
+//
+// }
+//console.log(count);
+//console.log(Object.keys(option).length);
+
+// option.name();
+//
+// const {broder, bd} = option.colors;
+// console.log(broder);
+
+
+
+// let arr = [ 61, 23, 34, 433, 15];
+// arr.sort(conpareNum);
+// console.log(arr);
+// function conpareNum(a,b){
+//     return a-b;
+// }
+//
+//  arr.forEach(function (item, i, arr) {
+//     console.log(`${i}: ${item} в масиве ${arr}`);
+// });
+
+// let str = prompt('Vash produkt');
+ //let produkt = str.split(", ");
+ //console.log(produkt.join('; '));
+
+
+const obj1 = {
+    colore: 'red',
+    namber: 10,
+    color:{
+        r: 1,
+        b: 2
     }
+};
+
+// function copy(obj1 ) {
+//     const newObj = {};
+//
+//     for(let i in obj1){
+//         newObj[i] = obj1[i];
+//     }
+//     return newObj;
+// }
+
+
+// let test = copy(obj1);
+
+
+const add = {
+    d: 20,
+    c: "e"
+};
+// метод assign для обєднання двох обєктів
+// console.log(Object.assign(obj1, add));
+
+//сплит оператор ... який дозволяє обєднувати два обєкта в один
+// let obft = { ...obj1, ...add};
+// console.log(obft);
+
+// метод slice який дозволяє обєднувати масиви
+ const art = [1,2,6,4];
+// const bbb = art.slice();
+// bbb.pop[1]=77;
+// console.log(bbb);
+
+// слит оператор ... який дозволяє обєднувати масиви
+// const g = [...art];
+// g[2]=100;
+// console.log(g);
+
+function namber(a,b,c){
+    console.log(a);
+    console.log(b);
+    console.log(c);
 }
-namberOffikms();
-const personalMovieDB = {
-    count: namberfikms,
-    muvios: {},
-    actors:{},
-    genres:{},
-    privat: false
-}
-
-function muvis(){
-    for( let i = 0; i <1; i++) {
-        let a = prompt('Какой фильм вы смотрели недавно?'),
-            b = +prompt('Какую оценку вы поставите фильму');
-        if (a != null && b != null && a != '' && b != '' && a.length < 10) {
-            personalMovieDB.muvios[a] = b;
-            console.log('done');
-        } else {
-            console.log('errors');
-            i--;
-        }
-    }
-}
-// muvis();
 
 
-function countFilms(){
-    let counF = personalMovieDB.count;
-    if(counF < 10){
-        alert('Просмотрено довольно мало фильмов');
-    }else if(counF == 10 || counF <=30){
-        alert('Вы классический зритель');
-    }else if (counF >=30){
-        alert('Вы киноман');
-    }else{
-        alert('Произошла ошибка');
-    }
-}
-// countFilms();
-
-function writeYourGenres(){
-
-    for(let i = 0; i<3; i++){
-        let ganrs = prompt(`Ваш лббимый жанр ${i}`);
-        personalMovieDB.genres[i] = ganrs;
-
-    }
-}
-writeYourGenres();
-
-function showMyDB(hiden){
-    if(!hiden){
-        console.log(personalMovieDB);
-    }else{
-        console.log('hidenDB');
-    }
-}
-console.log(personalMovieDB.genres);
-showMyDB(personalMovieDB.privat);
+namber(...art);
