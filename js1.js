@@ -164,14 +164,14 @@ P.S. Функции вызывать не обязательно*/
  //console.log(produkt.join('; '));
 
 
-const obj1 = {
-    colore: 'red',
-    namber: 10,
-    color:{
-        r: 1,
-        b: 2
-    }
-};
+// const obj1 = {
+//     colore: 'red',
+//     namber: 10,
+//     color:{
+//         r: 1,
+//         b: 2
+//     }
+// };
 
 // function copy(obj1 ) {
 //     const newObj = {};
@@ -186,10 +186,10 @@ const obj1 = {
 // let test = copy(obj1);
 
 
-const add = {
-    d: 20,
-    c: "e"
-};
+// const add = {
+//     d: 20,
+//     c: "e"
+// };
 // метод assign для обєднання двох обєктів
 // console.log(Object.assign(obj1, add));
 
@@ -199,20 +199,134 @@ const add = {
 
 // метод slice який дозволяє обєднувати масиви
  const art = [1,2,6,4];
-// const bbb = art.slice();
-// bbb.pop[1]=77;
-// console.log(bbb);
+const bbb = art.slice();
+bbb.push(77);
+console.log(bbb);
 
 // слит оператор ... який дозволяє обєднувати масиви
 // const g = [...art];
 // g[2]=100;
 // console.log(g);
 
-function namber(a,b,c){
-    console.log(a);
-    console.log(b);
-    console.log(c);
+// function namber(a,b,c){
+//     console.log(a);
+//     console.log(b);
+//     console.log(c);
+// }
+//
+//
+// namber(...art);
+
+const personalMovieDB = {
+    count: 0,
+    muvios: {},
+    actors: {},
+    genres: [],
+    privat: true,
+    start: function () {
+        personalMovieDB.count = +prompt('Сколько фильмов вы посмотрели?');
+        while (personalMovieDB.count == '' || personalMovieDB.count == null || isNaN(personalMovieDB.count)) {
+            personalMovieDB.count = +prompt('Сколько фильмов вы посмотрели?');
+        }
+    },
+    muvis: function(){
+    for( let i = 0; i <2; i++) {
+        let a = prompt('Какой фильм вы смотрели недавно?'),
+            b = +prompt('Какую оценку вы поставите фильму');
+        if (a != null && b != null && a != '' && b != '' && a.length < 10) {
+            personalMovieDB.muvios[a] = b;
+            console.log('done');
+        } else {
+            console.log('errors');
+            i--;
+        }
+    }
+},
+    countFilms: function(){
+    let counF = personalMovieDB.count;
+    if(counF < 10){
+        alert('Просмотрено довольно мало фильмов');
+    }else if(counF == 10 || counF <=30){
+        alert('Вы классический зритель');
+    }else if (counF >=30){
+        alert('Вы киноман');
+    }else{
+        alert('Произошла ошибка');
+    }
+},
+    writeYourGenres: function(){
+
+    for(let i = 1; i<3; i++){
+        let ganrs = prompt(`Ваш лббимый жанр ${i}`);
+
+        if(ganrs === '' || ganrs == null){
+            console.log('Вы ввели некоректние данные!');
+            i--;
+        }else{
+            personalMovieDB.genres[i-1] = ganrs;
+        }
+
+    }
+        personalMovieDB.genres.forEach((item, i)=>{
+            console.log(`Любимый жанр ${i+1} - это ${item}`);
+        })
+
+},
+    showMyDB: function(hiden){
+    if(!hiden){
+        console.log(personalMovieDB);
+    }else{
+        console.log('hidenDB');
+    }
+},
+    toglVisiblMyDB: function (){
+        if(personalMovieDB.privat){
+            personalMovieDB.privat = false;
+        }else{
+            personalMovieDB.privat = true;
+        }
+    }
+};
+
+// personalMovieDB.writeYourGenres();
+// console.log(personalMovieDB.genres);
+
+let obj = {
+    namber1: 25,
+    namber2: 35,
+    date: {
+        october: 22,
+        november: 14
+    }
 }
 
+let obj2 ={
+    color: "red",
+    red: 2
+}
 
-namber(...art);
+let arr = [1,2,3];
+let objClone = Object.assign(obj, obj2);
+objClone = value
+console.log(objClone);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
